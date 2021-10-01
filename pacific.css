@@ -1,0 +1,136 @@
+/*
+GUI1 Homework2: Style a Site with External CSS
+Name: Alvin Tran
+Date: 9/30/2021
+
+Short Description: The goal of this assignment is to transform the layout of the webpage created 
+by the provided html and css files to a completely different and better looking layout displayed 
+by the example image in the assignment2 pdf by only editing the css file. To add on, one main 
+feature of the new layout of the webpage is that as it gets resize, the webpage's content will change 
+accordingly and will stay centered on the webpage until it gets to a minimum width.
+*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+
+/*
+The body has an 80% width with a 600px minimum width. The body gets centered by setting the 
+left and right margin to auto.
+*/
+body {
+    background-color: #00569f;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    min-width: 600px;
+    margin: 0px auto 0px auto;
+    padding: 10px;
+    background-image: url("ptrbackground.jpg");
+}
+
+#wrapper {
+    background-color: lightblue;
+}
+
+/*
+The navigation section is floated to the left so that the content can be to the right of it.
+*/
+nav {
+    float: left;
+}
+
+nav ul {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/*
+I setted the left margin to -20px because I wanted the navigation list to be positioned more
+to the left like how the example image displayed it.
+*/
+nav li {
+    display: block;
+    margin-left: -20px;
+}
+
+nav a:link {
+    text-decoration: none;
+    color: #000033;
+}
+
+nav a:visited {
+    color: #344873;
+}
+
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/*
+I setted the left margin to 190px so the content portion is positioned to the right making the 
+navigation menu look like an actual menu since I also setted the background color to white.
+Padding is added so that the left side of the content has some space.
+*/
+#content, footer {
+    background-color: white;
+    margin-left: 190px;
+    padding: 1px 0px 1px 30px;
+}
+
+/*
+For the top banner, the background has no-repeat so that the sunset image does not get
+repeated over and over on the banner.
+*/
+h1 {
+    margin-bottom: 0px;
+    padding: 10px;
+    background-image: url("sunset.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #000033;
+    color: white;
+}
+
+h2 {
+    color: #3399CC;
+}
+
+h1, h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/*
+The coast image is floated to the left so that the text content can be right beside it
+like how the example images displayed the text content. After doing so the content text 
+now responds like the example images as the webpage gets resized.
+*/
+#content img {
+    float: left;
+    margin-right: 20px;
+}
+
+.resort {
+    color: #3399CC;
+    font-weight: bold;
+}
+
+/*
+By setting inside for the list-style, the edge of the bullet points gets aligned with
+the start of the paragraph above it.
+*/
+#content li {
+    list-style: inside;
+    list-style-image: url("marker.gif");
+}
+
+#contact {
+    font-size: 90%;
+}
+
+footer {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    padding: 20px;
+}
